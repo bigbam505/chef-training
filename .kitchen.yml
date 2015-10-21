@@ -1,0 +1,17 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: windows-2008R2
+    driver:
+      box: windows-2008r2-net451
+      gui: true
+
+suites:
+  - name: default
+    run_list:
+      - recipe[chef-training]
